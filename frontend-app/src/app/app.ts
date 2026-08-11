@@ -9,4 +9,15 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('frontend-app');
+
+    isDark = false;
+
+  toggleTheme() {
+    this.isDark = !this.isDark;
+
+    document.documentElement.classList.toggle(
+      'dark',
+      this.isDark
+    );
+  }
 }
