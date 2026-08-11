@@ -1,6 +1,7 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 export class Login implements OnInit, OnDestroy {
 
   private fb = inject(FormBuilder);
+  private router = inject(Router);
 
   public loginForm : FormGroup;
 
@@ -30,7 +32,11 @@ export class Login implements OnInit, OnDestroy {
   }
 
   public onSubmit():void{
-    
+
+  }
+
+  public redirectSignup():void{
+    this.router.navigate(['/auth/signup']);
   }
 
   ngOnDestroy(): void{
