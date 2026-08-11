@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Button } from '../../shared/components/button/button';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,4 +14,11 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+
+  private router = inject(Router);
+
+  public redirectLogin() : void{
+    this.router.navigate(['/auth/login']);
+  }
+}

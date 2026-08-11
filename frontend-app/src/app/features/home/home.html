@@ -13,7 +13,7 @@
                     Referral<span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                         Flow </span>
                 </span>
-            </a> <!-- Login --> <a routerLink="/auth/login"
+            </a> <!-- Login --> <a (click)="redirectLogin()"
                 class="rounded-lg border border-blue-500/30 bg-slate-900/70 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-cyan-400/60 hover:bg-blue-500/10 hover:text-cyan-300">
                 Login </a>
         </nav>
@@ -154,11 +154,9 @@
 
 
         </section> <!-- ==================== FEATURES ==================== -->
-        <section 
-        id="features" class="border-t border-slate-900 bg-slate-950 py-16 lg:py-20">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8" 
-            pAnimateOnScroll enterClass="animate-enter fade-in-10 animate-duration-1000"
-            >
+        <section id="features" class="border-t border-slate-900 bg-slate-950 py-16 lg:py-20">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8" pAnimateOnScroll
+                enterClass="animate-enter fade-in-10 animate-duration-1000">
                 <!-- Section heading -->
                 <div class="mx-auto max-w-2xl text-center animate-[fadeUp_0.7s_ease-out_both]">
                     <p class="text-sm font-semibold uppercase tracking-widest text-cyan-400">
