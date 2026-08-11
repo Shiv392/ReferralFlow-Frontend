@@ -2,13 +2,15 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Button } from '../../../shared/components/button/button';
 
 @Component({
   selector: 'app-login',
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Button
   ],
   templateUrl: './login.html',
   styleUrl: './login.css',

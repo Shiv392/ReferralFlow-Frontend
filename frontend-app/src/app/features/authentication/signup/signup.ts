@@ -7,13 +7,15 @@ import {
   ReactiveFormsModule,
   Validators
 } from '@angular/forms';
+import { Button } from '../../../shared/components/button/button';
 
 @Component({
   selector: 'app-signup',
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Button
   ],
   templateUrl: './signup.html',
   styleUrl: './signup.css',
